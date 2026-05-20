@@ -152,5 +152,22 @@ main {
     margin-bottom: 1.25rem;
 }
 
+.resultado .total {
+    margin-bottom: 2rem;
+}
+
+.resultado button {
+    width: 100%;
+    padding-block: 0.5rem;
+    background-color: var(--light-green-);
+    color: var(--green-800);
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.3125rem;
+}
+
 
 
