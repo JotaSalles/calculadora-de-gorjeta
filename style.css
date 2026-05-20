@@ -20,11 +20,8 @@
 
 body {
     background-color: var(--green-200);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
+
 
 header {
    display: flex;
@@ -166,7 +163,25 @@ main {
     font-weight: 700;
     text-transform: uppercase;
     border: none;
-    border-radius: 0.3125rem;
+}
+
+@media(min-width: 920px) {
+    main {
+        display: flex;
+        gap: 3rem;
+        padding: 3rem;
+        border-radius: 1.5625rem;
+        max-width: 57.5rem;
+        margin-inline: auto;
+    }
+
+    main section {
+        width: 100%;
+    }
+
+    .gorjeta div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 
