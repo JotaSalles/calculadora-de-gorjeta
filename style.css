@@ -85,7 +85,7 @@ main {
 .pessoas:has(input:hover) .input-box,
 .gorjeta #outra:focus,
 .gorjeta #outra:hover {
-   outline: 2px solid var(--light-green-);
+   outline: 2px solid var(--light-green);
    cursor: pointer;
 }
 
@@ -187,7 +187,7 @@ main {
 .resultado button {
     width: 100%;
     padding-block: 0.5rem;
-    background-color: var(--light-green-);
+    background-color: var(--light-green);
     color: var(--green-800);
     font-weight: 700;
     font-size: 1.25rem;
