@@ -14,8 +14,10 @@
     --green-600: #547878;
     --green-700: #3d6666;
     --green-800: #00474B;
-    --light-green-: #26c2ae;
+    --light-green: #26c2ae;
     --white : #fff;
+    --green-hover: #9fe8df;
+    --danger: #e17457;
 }
 
 body {
@@ -50,7 +52,7 @@ main {
 }
 
 .conta div,
-.pessoas div {
+.pessoas .input-box{
     margin-top: 0.4rem;
     background-color: var(--green-100);
     padding: 0.4rem 1.2rem;
@@ -78,8 +80,13 @@ main {
 }
 
 .conta:has(input:focus) div,
-.pessoas:has(input:focus) div {
+.conta:has(input:hover) div,
+.pessoas:has(input:focus) .input-box,
+.pessoas:has(input:hover) .input-box,
+.gorjeta #outra:focus,
+.gorjeta #outra:hover {
    outline: 2px solid var(--light-green-);
+   cursor: pointer;
 }
 
 
@@ -103,6 +110,12 @@ main {
     color: var(--white);
 }
 
+.gorjeta input[type="button"]:hover,
+.resultado button:hover {
+    background-color: var(--green-hover);
+    cursor: pointer;
+}
+
 .gorjeta #outra{
     width: 100%;
     background-color: var(--green-100);
@@ -114,7 +127,20 @@ main {
     color: var(--green-300);
 }
 
+.pessoas .textos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pessoas #erro-div {
+    outline: 2px solid var(--danger);
+}
+
 .pessoas #erro {
+    font-size: 0.75rem;
+    color: var(--danger);
+    font-weight: 700;
     display: none;
 }
 
@@ -141,7 +167,7 @@ main {
 }
 
 .resultado div > strong {
-    color: var(--light-green-);
+    color: var(--light-green);
     font-size: 2rem;
 }
 
@@ -165,6 +191,12 @@ main {
     border: none;
 }
 
+  .conta input::-webkit-inner-spin-button,
+  .pessoas input::-webkit-inner-spin-button,
+  .gorjeta #outra::-webkit-inner-spin-button {
+      display: none;
+  }
+
 @media(min-width: 920px) {
     body{
         display: flex;
@@ -175,7 +207,7 @@ main {
     }
 
     header {
-        padding: 0;
+        padding-block: 2rem;
     }
 
     main {
@@ -190,11 +222,6 @@ main {
     main section {
         width: 100%;
     }
-
-  .conta input::-webkit-inner-spin-button,
-  .pessoas input::-webkit-inner-spin-button {
-      display: none;
-  }
 
     .gorjeta div {
         grid-template-columns: 1fr 1fr 1fr;
@@ -211,8 +238,5 @@ main {
     .resultado div > strong{
         font-size: 3rem;
     }
-
 }
-
-
 
