@@ -31,9 +31,18 @@ const divErro = document.querySelector(".pessoas .input-box")
 
 const botoesGorjeta = document.querySelectorAll(".gorjeta input[type='button']")
 botoesGorjeta.forEach(botao => {
-    botao.addEventListener("click", receberValorGorjeta)
+    botao.addEventListener("click", receberPorcentagemBotao)
 })
 
-function receberPorcentagem(evento) {
-    console.log(evento.target.value)
+function receberPorcentagemBotao(evento) {
+    botoesGorjeta.forEach(botao => {
+        botao.classList.remove("botao-ativo")
+      if (botao.value === evento.target.value) {
+        botao.classList.add("botao-ativo")
+    }
+})
+
+    porgcentagem = parseFloat(evento.target.value) / 100
+
+
 }
